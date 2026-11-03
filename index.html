@@ -1,0 +1,128 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"><meta name="robots" content="noindex"><title>Two Sources</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Schibsted+Grotesk:wght@500;700;800&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&display=swap">
+<style>
+/* One narrow reading column. The pair of dots beside each story's sources is the page's signature: it shows how many separate outlets back the story. */
+:root {
+  --bg: #f2f5f7;
+  --ink: #17212b;
+  --muted: #566370;
+  --line: #d3dae0;
+  --accent: #0a5aa8;
+  --dot: #0d7a5e;
+  --flag: #8f5400;
+  --flag-bg: #fbf0dc;
+  --display: "Schibsted Grotesk", "Helvetica Neue", Arial, sans-serif;
+  --body: "Source Serif 4", Georgia, "Times New Roman", serif;
+  --mono: "IBM Plex Mono", ui-monospace, Menlo, monospace;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #0f151b;
+    --ink: #e5ebf0;
+    --muted: #98a5b1;
+    --line: #2a343e;
+    --accent: #7dbbf6;
+    --dot: #5ccba6;
+    --flag: #eabb6c;
+    --flag-bg: #2a2214;
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #0f151b;
+  --ink: #e5ebf0;
+  --muted: #98a5b1;
+  --line: #2a343e;
+  --accent: #7dbbf6;
+  --dot: #5ccba6;
+  --flag: #eabb6c;
+  --flag-bg: #2a2214;
+  color-scheme: dark;
+}
+body { background: var(--bg); color: var(--ink); font-family: var(--body); font-size: 18px; line-height: 1.5; }
+main {
+  max-width: 38rem;
+  margin: 0 auto;
+  padding-block: 40px 64px;
+  padding-left: max(16px, env(safe-area-inset-left, 0px));
+  padding-right: max(16px, env(safe-area-inset-right, 0px));
+  display: grid;
+  gap: 48px;
+}
+h1, h2, h3 { font-family: var(--display); margin: 0; text-wrap: balance; }
+p { margin: 0; }
+a { color: var(--accent); text-underline-offset: 2px; }
+a:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+
+.masthead { display: grid; gap: 12px; }
+.masthead-top { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 8px 16px; }
+h1 { font-size: 2.1rem; font-weight: 800; letter-spacing: -0.02em; line-height: 1.1; }
+.test-label { font-family: var(--mono); font-size: 0.72rem; color: var(--flag); background: var(--flag-bg); padding: 3px 8px; border-radius: 3px; }
+.dateline { font-family: var(--display); font-weight: 500; font-size: 1.05rem; }
+.meta { font-family: var(--mono); font-size: 0.8rem; color: var(--muted); }
+.legend { display: grid; gap: 4px; font-size: 0.92rem; color: var(--muted); }
+.legend div { display: flex; gap: 8px; align-items: baseline; }
+
+.dots { display: inline-flex; gap: 3px; flex: none; }
+.dots i { width: 9px; height: 9px; border-radius: 50%; border: 1.5px solid var(--dot); background: var(--dot); display: block; }
+.dots.one i { border-color: var(--flag); background: var(--flag); }
+.dots.one i + i { background: transparent; }
+
+section { display: grid; gap: 32px; }
+h2 { font-size: 0.82rem; font-weight: 700; letter-spacing: 0.09em; text-transform: uppercase; color: var(--muted); padding-bottom: 8px; border-bottom: 1px solid var(--line); }
+.intro { display: grid; gap: 8px; font-size: 1rem; color: var(--muted); }
+article { display: grid; gap: 8px; }
+h3 { font-size: 1.28rem; font-weight: 700; line-height: 1.22; letter-spacing: -0.01em; }
+.note { font-size: 0.95rem; color: var(--muted); }
+.note b { font-family: var(--display); font-weight: 700; color: var(--ink); }
+.note.flag { color: var(--ink); background: var(--flag-bg); padding: 8px 10px; border-radius: 3px; }
+.note.flag b { color: var(--flag); }
+.sources { display: flex; flex-wrap: wrap; align-items: center; gap: 4px 12px; font-family: var(--mono); font-size: 0.78rem; }
+
+.about { display: grid; gap: 24px; font-size: 0.95rem; padding-top: 24px; border-top: 1px solid var(--line); }
+.about h2 { border: 0; padding: 0; }
+.about div { display: grid; gap: 8px; }
+.about ul { margin: 0; padding-left: 1.1em; display: grid; gap: 4px; }
+</style>
+
+<style>html,body{margin:0}</style></head><body><main>
+  <header class="masthead">
+    <div class="masthead-top">
+      <h1>Two Sources</h1>
+      <span class="test-label">One-week trial</span>
+    </div>
+    <p class="dateline">Monday, November 2, 2026</p>
+    <p class="meta">9 stories · about 3 min</p>
+    <div class="legend">
+      <div><span class="dots" role="img" aria-label="Two dots"><i></i><i></i></span><span>Two or more separate outlets reported it.</span></div>
+      <div><span class="dots one" role="img" aria-label="One dot"><i></i><i></i></span><span>Only one source so far.</span></div>
+    </div>
+  </header>
+
+  <section><h2>Elections</h2><div class="intro"><p>Election Day is tomorrow, Tuesday, November 3. More than 54 million people have already voted, according to CBS and Fox. Republicans now hold the Senate 53-47 and a narrow House majority.</p><p class="sources"><span class="dots" role="img" aria-label="Two or more separate outlets"><i></i><i></i></span><a href="https://www.cbsnews.com/live-updates/2026-elections-monday-november-2/">CBS</a><a href="https://www.foxnews.com/live-news/midterm-elections-2026-haley-stevens-mike-rogers-michigan-november-2">Fox</a></p></div><article><h3>Justice Department asks Supreme Court to set aside California ballots</h3><p>The department asked the Supreme Court on Monday to make California set aside mail ballots from about 20,000 people on a government list of suspected noncitizens. A federal judge and then an appeals court, 2-1, refused. The department says the ballots cannot be separated once they are mixed with others. California says the list is unreliable and likely includes many citizens.</p><p class="note"><b>Still unknown:</b> Whether the justices will act before Tuesday.</p><p class="sources"><span class="dots" role="img" aria-label="Two or more separate outlets"><i></i><i></i></span><a href="https://www.cbsnews.com/news/trump-supreme-court-california-ballots-alleged-noncitizens/">CBS</a><a href="https://www.pbs.org/newshour/politics/trump-administration-asks-supreme-court-to-sideline-20000-disputed-california-mail-ballots">PBS (AP)</a></p></article><article><h3>Staff quit after Haley Stevens backs Republican in Michigan</h3><p>Rep. Haley Stevens’s chief of staff, Justin German, said he and other staff members resigned after she endorsed Republican Mike Rogers on Sunday. Stevens told CNN she still wants Democrats to win the Senate. The campaign of Democratic nominee Abdul El-Sayed says it raised more than $2.4 million Sunday, a one-day record.</p><p class="sources"><span class="dots" role="img" aria-label="Two or more separate outlets"><i></i><i></i></span><a href="https://www.foxnews.com/live-news/midterm-elections-2026-haley-stevens-mike-rogers-michigan-november-2">Fox</a><a href="https://www.cbsnews.com/live-updates/2026-elections-monday-november-2/">CBS</a><a href="https://thehill.com/homenews/campaign/6187032-stevens-staffers-resign-rogers-endorsement/">The Hill</a></p></article></section>
+  <section><h2>United States</h2><article><h3>Supreme Court hears Colorado preschool case Tuesday</h3><p>The justices hear arguments Tuesday on whether Colorado can keep Catholic preschools out of its state-funded preschool program. The schools turn away families whose beliefs on marriage and sex differ from church teaching, and say the state allows other exceptions. Colorado says religious schools may teach their faith but must give all families an equal chance to enroll. Lower courts sided with Colorado.</p><p class="sources"><span class="dots" role="img" aria-label="Two or more separate outlets"><i></i><i></i></span><a href="https://www.cbsnews.com/news/supreme-court-religious-liberty-colorado-preschools-st-mary-catholic-parish-v-roy/">CBS</a><a href="https://www.foxnews.com/politics/catholic-schools-banned-rifles-climate-lawfare-blockbuster-fights-await-supreme-court">Fox</a><a href="https://www.npr.org/2026/11/01/nx-s1-6000367/supreme-court-colorado-catholic-preschool-religious-freedom-lgbtq">NPR</a></p></article><article><h3>Judge throws out case against two former FBI officials</h3><p>A federal magistrate judge on Monday dismissed a complaint accusing former FBI officials Nikki Floris and Bradley Benavides of lying to Congress about the Hunter Biden laptop investigation. Judge Zia Faruqui said prosecutors lacked probable cause and called the case “weaponization.” The Justice Department can appeal or ask a grand jury for an indictment.</p><p class="sources"><span class="dots" role="img" aria-label="Two or more separate outlets"><i></i><i></i></span><a href="https://www.cbsnews.com/news/judge-dismisses-ex-fbi-officials-hunter-biden-case/">CBS</a><a href="https://www.pbs.org/newshour/politics/judge-dismisses-charges-against-ex-fbi-agents-accused-of-lying-about-hunter-biden-citing-weaponization">PBS (AP)</a></p></article><article><h3>Pilot reported ice before Florida jet crash</h3><p>Air traffic audio from Sunday’s Learjet crash in Palm Beach County has a pilot saying “We’re managing the ice,” then declaring an emergency. All nine aboard died. The plane’s last data showed it near 9,000 feet and descending at more than 32,000 feet a minute. Gov. Ron DeSantis said no one on the ground was hurt.</p><p class="note"><b>Still unknown:</b> The cause. Federal investigators were expected to give an update Monday.</p><p class="note flag"><b>Reports differ:</b> The co-pilot’s name. CBS and Fox both say the co-pilot was 20 but give different last names.</p><p class="sources"><span class="dots" role="img" aria-label="Two or more separate outlets"><i></i><i></i></span><a href="https://www.cbsnews.com/news/pilot-florida-plane-crash-ice-mayday/">CBS</a><a href="https://www.foxnews.com/us/co-pilot-killed-fiery-florida-learjet-crash-identified-20-year-old-learned-fly-before-driving">Fox</a></p></article><article><h3>New Ebola travel rule starts Tuesday night</h3><p>Starting at 11:59 p.m. Eastern on Tuesday, everyone flying to the U.S. from abroad, including citizens and crew, must sign a statement that they have not been in Congo in the past 21 days. Airline groups asked the CDC to delay it, saying they cannot change their systems in time.</p><p class="note"><b>Still unknown:</b> Whether the CDC will delay it. Its rule page, last updated October 30, mentions no delay.</p><p class="sources"><span class="dots" role="img" aria-label="Two or more separate outlets"><i></i><i></i></span><a href="https://www.cdc.gov/port-health/legal-authorities/attestation-order.html">CDC</a><a href="https://www.foxnews.com/travel/deadly-disease-sparks-new-cdc-rule-us-bound-flyers-major-airlines-seek-delay">Fox</a></p></article></section>
+  <section><h2>World</h2><article><h3>Iran’s negotiators leave Qatar as a draft proposal circulates</h3><p>Iranian negotiators left Qatar on Sunday after three days of talks with mediators. AP cites a regional official saying a draft proposal is circulating and another meeting is being discussed. Iran says it is waiting for a U.S. response. President Trump said Sunday the war would end soon, “one way or the other.” AP reports the region is preparing for possible strikes after Tuesday’s election.</p><p class="note"><b>Still unknown:</b> What the draft says.</p><p class="sources"><span class="dots" role="img" aria-label="Two or more separate outlets"><i></i><i></i></span><a href="https://www.pbs.org/newshour/world/irans-delegation-has-left-negotiations-in-qatar-after-a-tense-weekend-heres-where-things-stand">PBS (AP)</a><a href="https://www.cbsnews.com/live-updates/iran-war-us-trump-diplomacy-threat-resume-attacks/">CBS</a><a href="https://www.foxnews.com/live-news/iran-war-news-trump-midterms-peace-deal-israel-november-2">Fox</a></p></article><article><h3>False nuclear alerts hit emergency apps in Ukraine and Russia</h3><p>Emergency phone apps in Ukraine and Russia sent false warnings Sunday night, including of nuclear attacks, and both countries say they were hacked. Russian state media said the fake alerts reached 33 regions. Ukrainian President Volodymyr Zelenskyy told PBS that Ukraine hacked Russia’s system in response to a Russian attack.</p><p class="note"><b>Still unknown:</b> Who hacked Ukraine’s app. Ukraine blames Russia, and the reports I read show no independent proof.</p><p class="sources"><span class="dots" role="img" aria-label="Two or more separate outlets"><i></i><i></i></span><a href="https://www.cbsnews.com/news/ukraine-russia-war-app-hack-cyberattack-fake-nuclear-chemical-alerts/">CBS</a><a href="https://www.pbs.org/newshour/world/watch-zelenskyy-confirms-ukraine-hacked-back-after-russias-cyberattack-of-its-emergency-alert-system">PBS</a></p></article></section>
+  <section><h2>Sports</h2><article><h3>Buccaneers win without completing a pass</h3><p>Tampa Bay beat Atlanta 16-0 on Sunday in heavy rain. Quarterback Baker Mayfield threw three passes and completed none, while the team ran for a club-record 324 yards. The last NFL team with no completions was Buffalo in 1974.</p><p class="sources"><span class="dots" role="img" aria-label="Two or more separate outlets"><i></i><i></i></span><a href="https://www.foxnews.com/outkick-sports/tampa-bay-buccaneers-win-nfl-game-without-completing-pass-first-time-happened-half-century">Fox</a><a href="https://www.espn.com/nfl/recap?gameId=401873025">ESPN</a></p></article></section>
+
+  <footer class="about">
+    <div>
+      <h2>Left out today</h2>
+      <ul><li>President Trump’s final speech before the election, set for 2 p.m. Eastern at the Lincoln Memorial Reflecting Pool. He had not spoken yet when I checked.</li><li>The end of the UN peacekeeping mission in Western Sahara after 35 years. The NPR article would not open, so I could not check it.</li><li>Oil prices falling 3% on Monday. Only Fox had this when I checked.</li><li>What Israeli Prime Minister Benjamin Netanyahu urged in his Saturday call with President Trump. Neither side has given details on the record.</li><li>New polls. They are snapshots of opinion, and the votes start being counted tomorrow.</li></ul>
+    </div>
+    <div>
+      <h2>How this is made</h2>
+      <ul>
+        <li>Claude, an AI, opens the articles and writes each story in its own words. It can make mistakes, so every story links to its sources.</li>
+        <li>A fact goes in only if two separate outlets report it. If only one does, the story says so. Two outlets running the same wire story count as one.</li>
+        <li>Claims and opinions get a name on them. Describing words like “stunning” are not allowed.</li>
+        <li>Choosing which stories to include is still a judgment call. That part can’t be fully objective.</li>
+        <li>AP, Reuters, BBC, The Guardian and The Wall Street Journal block Claude’s search tool, so they are only used where another outlet carries their stories.</li>
+      </ul>
+    </div>
+    <p class="meta">Checked Monday, November 2, about 1:30 p.m. Eastern. Stories can change after that.</p>
+  </footer>
+</main>
+</body></html>
